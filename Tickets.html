@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprar tickets</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="Styles.css">
+    <script src="./js/bootstrap.min.js"></script>
+    <script rel="text/javascript" src="Tickets.js"></script>
+</head>
+<body>
+    <section class="header">
+        <div class="container">
+            <nav class="navbar navbar-expand-md navbar-light">
+            <a href="index.html" target="_blank" class="navbar-brand">
+                <img src="Img\codoacodo.png" alt="Codo a Codo logo" width="90" height="50"
+                class="d-inline-block aling-top"/>
+                Conf Bs As</a>
+            <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#toggleMobileMenu"
+            aria-controls="toggleMobileMenu"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            >
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="toggleMobileMenu">
+                <ul class="navbar-nav ms-auto text-center">
+                    <li>
+                        <a class="nav-link1" href="#">La conferencia</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#">Los oradores</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#">El lugar y la fecha</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#">Conviértete en orador</a>
+                    </li>
+                    <li>
+                        <a class="nav-link4"  href="Tickets.html">Comprar tickets</a>
+                    </li>
+                </ul>
+            </div>
+            </nav>
+        </div>
+    </section>
+
+    <section>
+        <div class="row row-cols-1 row-cols-md-3 g-4 " style="width: 60%; margin-left: 20%; ">
+            <div class="col-sm-6">
+              <div class="card border-primary rounded-0" style="margin: 15px 0px;  ">
+                <div class="card-body " style="text-align: center;">
+                  <h5 class="card-title ">Estudiante</h5>
+                  <p class="card-text">Tiene un descuento</p>
+                  <p class="card-text"><strong>80%</strong></p>
+                  <p class="card-text"><small>*presentar documentacion</small></p>
+                 
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="card rounded-0" style="border-color: green;margin: 15px 0px;">
+                <div class="card-body" style="text-align: center;">
+                  <h5 class="card-title">Trainee</h5>
+                  <p class="card-text">Tiene un descuento</p>
+                  <p class="card-text"><strong>50%</strong></p>
+                  <p class="card-text"><small>*presentar documentacion</small></p>
+                 
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="card border-warning rounded-0" style=" margin: 15px 0px;">
+                <div class="card-body" style="text-align: center;">
+                  <h5 class="card-title">Junior</h5>
+                  <p class="card-text">Tiene un descuento</p>
+                  <p class="card-text"><strong>15%</strong></p>
+                  <p class="card-text"><small>*presentar documentacion</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+    </section>
+
+    <p style="text-align: center; margin-bottom: 0; font-size: 10px; margin-top: 1%;">VENTA </p>
+    <h2 class='fs-4' style="text-align: center; padding: 0; margin-top: 0;">VALOR DE TICKETS $200</h2> 
+
+      <form style="width: 60%; margin-left: 20%;  " target="_blank" id="formulario"  name="form-tickets" >
+      
+        <div class="col w-100">
+          <div class="row   " >
+         
+            <div class=" col-sm-12 col-md-6 ">
+             
+              <input id="nombre" type="text" name="nombre" class="form-control " placeholder="Nombre" aria-label="nombre" onblur="validarnombre()" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$">
+              <label id="mensaje" style="width: auto;" ></label>
+            </div>
+            <div class=" col-sm-12 col-md-6 ">
+              <input id="apellido" type="text" name="apellido" class="form-control " placeholder="Apellido" aria-label="apellido" onblur="validarapellido()" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" >
+              <label id="mensaje2" ></label>
+            </div>
+       
+          </div>
+        </div>
+        <div class="col form-text   ">
+          <input id="email" type="text" class="form-control" placeholder="Correo" aria-label="email" onblur="validaremail()"  >
+          <label id="mensaje3"></label>
+        </div>
+        <div>
+
+          <div class="row">
+            <div class="col-sm-12 col-md-6 ">
+              <div  class="form-text " style="color: black;" >
+                Cantidad.
+              </div>
+              <input id="cantidad" type="number" class="form-control form-text"  aria-label="cantidad" onblur="validarcantidad()">
+              <label id="mensaje4"></label>
+            </div>
+            <div class="col-sm-12 col-md-6">
+              <div  class="form-text " style="color: black;" >
+                Categoria.
+              </div>
+
+              <select id="categoria" class="form-select"  style="margin: 4px;" onblur="validarcategoria()">
+               
+                <option value="">Seleccione una opcion</option>
+                <option value="0.2">Estudiante</option>
+                <option value="0.5">Trainee</option>
+                <option value="0.85">Junior</option>
+              </select>
+              <label id="mensaje5"></label>
+              
+               
+            </div>
+          </div>
+         </div>
+           <div class="col w-100">
+          <div class="row   " >
+         
+            <div class=" col-sm-12 ">
+              <input id="total" type="text" class="form-control " placeholder="Total a pagar" aria-label="First name" style="background-color: #CCE5FF;border-color:#CCE5FF ;" >
+            </div>
+            
+       
+          </div>
+          </div>
+          <div class="col w-100 " >
+           <div class="row p-0 ">
+            <div class="col-sm-12 col-md-6">
+              <button class="btn btn-primary w-100" style="background-color: #96C93E;border: #96C93E ; margin: 1% 0 1% 0; " type="button" onclick="ponercero()">Borrar</button>
+            </div>
+            <div class="col-sm-12 col-md-6">
+              <button class="btn btn-primary w-100 " style="background-color: #96C93E;border: #96C93E; margin: 1% 0 1% 0; " type="button"  onclick="validacion() " >Resumen</button>
+             
+            </div>
+            </div>
+          </div>
+          </form>
+
+          <footer >
+            <ul class="menu">
+                <li><a href="#">Preguntas<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;frecuentes</a></li>
+                <li><a href="#">Contáctanos</a></li>
+                <li><a href="#">Prensa</a></li>
+                <li><a href="#">Conferencias</a></li>
+                <li><a href="#">Términos y<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;condiciones</a></li>
+                <li><a href="#">Privacidad</a></li>
+                <li><a href="#">Estudiantes</a></li>
+            </ul>
+        </footer>
+</body>
+</html>
